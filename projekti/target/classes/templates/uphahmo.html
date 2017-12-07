@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Muokkaa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+	<h1>Muokkaa hahmoa</h1>
+<div class="modal-body">
+            <form class="form-horizontal bv-form" action="addhahmo" th:action="@{/add}" th:object="${hahmo}" method="put" id="id">
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Nimi</label>
+                    <div class="col-md-5">
+                        <input type="text" name="nimi" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Ikä</label>
+                    <div class="col-md-5">
+                        <input type="password" name="ika" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Koodi</label>
+                    <div class="col-md-5">
+                        <input type="password" name="koodi" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Elain</label>
+                    <div class="col-md-5">
+                        <input type="text" name="elain" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-5 control-label">
+                        <button class="btn btn-default" type="submit">Update</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+</body>
+</html>
